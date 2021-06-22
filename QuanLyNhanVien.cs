@@ -75,7 +75,7 @@ namespace QLNhanSu
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
             int i;
             i = dataGridView1.CurrentRow.Index;
             txtMaNv.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
@@ -85,11 +85,14 @@ namespace QLNhanSu
             txtSdt.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
             dtpNgaySinh.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
         }
-       
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
+            command = connection.CreateCommand();
+            command.CommandText = "delete from NHANVIEN where id_Nv ='" + txtMaNv.Text + "'";
+            command.ExecuteNonQuery();
+            loadData();
         }
         //gọi sự kiện đóng form
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -100,26 +103,78 @@ namespace QLNhanSu
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
-            
+            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+
+            connection.Open();
+
+            string sql = "select * from NHANVIEN where id_Nv = '" + txtMaNv.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+
+            SqlDataReader dta = cmd.ExecuteReader();
+            if (dta.Read() == true)
+            {
+
+                MessageBox.Show(" Trùng mã nhân viên! Mời Nhập lại");
+            }
+            else
+            {
+                if (txtMaNv.Text != null)
+                {
+                    dta.Close();
+                    command = connection.CreateCommand();
+                    command.CommandText = "Insert into NHANVIEN values('" + txtMaNv.Text + "', N'" + txtTenNv.Text + "', N'" + txtGioiTinh.Text + "', N'" + txtDiachi.Text + "', N'" + txtSdt.Text + "', N'" + dtpNgaySinh.Text + "')";
+                    command.ExecuteNonQuery();
+                    loadData();
+                }
+
+            }
         }
 
         private void btnreset_Click(object sender, EventArgs e)
         {
             txtMaNv.Text = "";
             txtTenNv.Text = "";
-            dtpNgaySinh.Text = "1/1/1900";
-            txtDiachi.Text = "";
             txtGioiTinh.Text = "";
+            txtDiachi.Text = "";
             txtSdt.Text = "";
+            dtpNgaySinh.Text = "1/1/1900";
+            txtSearch.Text = "";
+            loadData();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            command = connection.CreateCommand();
+            command.CommandText = "update NHANVIEN set id_Nv='" + txtMaNv.Text + "', ten_Nv = N'" + txtTenNv.Text + "', gioiTinh_Nv= N'" + txtGioiTinh.Text + "', diaChi_Nv= N'" + txtDiachi.Text + "', sdt_Nv= N'" + txtSdt.Text + "', dob_Nv= N'" + dtpNgaySinh.Text + "' where id_Nv='"+txtMaNv.Text+"' ";
+            command.ExecuteNonQuery();
+            loadData();
         }
         private void btnTim_Click(object sender, EventArgs e)
         {
-            
+            // tìm kiếm theo tên nhân viên
+            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            connection.Open();
+            string tenNV = txtSearch.Text;
+            string sql = "select ten_Nv from NHANVIEN where ten_Nv = '" + txtSearch.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            SqlDataReader data = cmd.ExecuteReader();
+
+            if (data.Read() == true)
+            {
+                data.Close();
+                command = connection.CreateCommand();
+                command.CommandText = "select * from NHANVIEN where ten_Nv='" + txtSearch.Text + "'";
+                adapter.SelectCommand = command;
+                table.Clear();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+            }
+            else
+            {
+                MessageBox.Show("Không có giáo viên cần tìm!");
+            }
         }
 
         //input listener

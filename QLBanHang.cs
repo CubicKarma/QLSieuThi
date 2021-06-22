@@ -94,6 +94,7 @@ namespace QLNhanSu
             txtTenHang.Text = "";
             txtDonGia.Text = "";
             txtTongTien.Text = "";
+            loadData();
         }
 
         private void btnThem_Click(object sender, EventArgs e)

@@ -89,6 +89,8 @@ namespace QLNhanSu
             txtSoLuong.Text = "";
             txtDonGiaNhap.Text = "";
             txtDonGiaBan.Text = "";
+            txtSearch.Text = "";
+            loadData();
         }
 
         private void btnAll_Click(object sender, EventArgs e)
