@@ -1,0 +1,9 @@
+.vs/
+bin/Debug/**.exe
+obj/
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
