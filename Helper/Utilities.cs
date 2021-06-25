@@ -47,7 +47,7 @@ namespace QLNhanSu.Helper
         //Datasourse (khac nhau)
         //DN: ADMIN\SQLEXPRESS
         //PHULONG: DESKTOP-9JCB5HS
-        public const string dataSource = @"Data Source=DESKTOP-9JCB5HS;Initial Catalog=QLSieuThi;Integrated Security=True";
+        public const string dataSource = @"Data Source=ADMIN;Initial Catalog=QLSieuThi;Integrated Security=True";
 
         public static int Clamp(ref int value, int min, int max)
         {
