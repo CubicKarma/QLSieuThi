@@ -90,6 +90,10 @@ namespace QLNhanSu
         private void btnXoa_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
+            command.CommandText = "delete from HOADON where id_Nv ='" + txtMaNv.Text + "'";
+            command.ExecuteNonQuery();
+
+            command = connection.CreateCommand();
             command.CommandText = "delete from NHANVIEN where id_Nv ='" + txtMaNv.Text + "'";
             command.ExecuteNonQuery();
             loadData();

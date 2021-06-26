@@ -88,8 +88,13 @@ namespace QLNhanSu
         private void btnXoa_Click(object sender, EventArgs e)
         {
             command = connection.CreateCommand();
+            command.CommandText = "delete from HOADON where id_Khach ='" + txtMaKH.Text + "'";
+            command.ExecuteNonQuery();
+
+            command = connection.CreateCommand();
             command.CommandText = "delete from KHACHHANG where id_Khach='" + txtMaKH.Text + "'";
             command.ExecuteNonQuery();
+
             loadData();
         }
 

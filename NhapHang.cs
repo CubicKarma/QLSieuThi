@@ -73,13 +73,12 @@ namespace QLNhanSu
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            //In ra bảng HANGNHAP
+            
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            //Thêm hàng vào bảng HANG
-            //có động tác thêm đồng thời vào bảng HANGNHAP để tạo chức năng cho nút thống kê
+            
         }
 
         private void btnreset_Click(object sender, EventArgs e)
