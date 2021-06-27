@@ -135,6 +135,91 @@ namespace QLNhanSu
         private void btnTim_Click(object sender, EventArgs e)
         {
             //kiểm tra điều kiện combobox đang tìm theo gì, trong combobox hiện đang có tìm theo mã hàng, tên hàng và số lượng
+
+            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            connection.Open();
+            //kiểm tra điều kiện combobox đang tìm theo gì, trong combobox hiện đang có tìm theo mã hàng, tên hàng và số lượng
+            if (cbxTimTheo.Text == "Mã hàng")
+            {
+                if (txtSearch.Text.Trim() != "")
+                {
+                    string sql = "select * from Hang where id_Hang = '" + txtSearch.Text + "'";
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+
+                    SqlDataReader sqlReader = cmd.ExecuteReader();
+                    if (sqlReader.Read() == true)
+                    {
+
+                        sqlReader.Close();
+                        command = connection.CreateCommand();
+                        command.CommandText = "select * from Hang where id_Hang='" + txtSearch.Text + "'";
+                        adapter.SelectCommand = command;
+                        table.Clear();
+                        adapter.Fill(table);
+                        dataGridView1.DataSource = table; ;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chưa nhập thông tin tìm kiếm hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            if (cbxTimTheo.Text == "Tên hàng")
+            {
+
+
+                if (txtSearch.Text.Trim() != "")
+                {
+                    string sql = "select * from Hang where ten_Hang = '" + txtSearch.Text + "'";
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+
+                    SqlDataReader sqlReader = cmd.ExecuteReader();
+                    if (sqlReader.Read() == true)
+                    {
+
+                        sqlReader.Close();
+                        command = connection.CreateCommand();
+                        command.CommandText = "select * from Hang where ten_Hang='" + txtSearch.Text + "'";
+                        adapter.SelectCommand = command;
+                        table.Clear();
+                        adapter.Fill(table);
+                        dataGridView1.DataSource = table; ;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chưa nhập thông tin tìm kiếm hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            if (cbxTimTheo.Text == "Số lượng")
+            {
+                if (txtSearch.Text.Trim() != "")
+                {
+                    string sql = "select * from Hang where soLuong = '" + txtSearch.Text + "'";
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+
+                    SqlDataReader sqlReader = cmd.ExecuteReader();
+                    if (sqlReader.Read() == true)
+                    {
+
+                        sqlReader.Close();
+                        command = connection.CreateCommand();
+                        command.CommandText = "select * from Hang where soLuong='" + txtSearch.Text + "'";
+                        adapter.SelectCommand = command;
+                        table.Clear();
+                        adapter.Fill(table);
+                        dataGridView1.DataSource = table; ;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chưa nhập thông tin tìm kiếm hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+            }
         }
     }
 }

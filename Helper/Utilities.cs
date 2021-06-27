@@ -49,7 +49,7 @@ namespace QLNhanSu.Helper
         //PHULONG: DESKTOP-9JCB5HS
         //public const string dataSource = @"Data Source=ADMIN;Initial Catalog=QLSieuThi;Integrated Security=True";
         //HAILONG
-        public const string dataSource = @"Data Source=DESKTOP-152SFQ3;Initial Catalog=QLSieuThi;Integrated Security=True";
+        public const string dataSource = @"Data Source=NGUYEN;Initial Catalog=QLSieuThi;Integrated Security=True";
 
         public static int Clamp(ref int value, int min, int max)
         {
