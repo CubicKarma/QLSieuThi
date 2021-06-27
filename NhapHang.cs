@@ -83,7 +83,7 @@ namespace QLNhanSu
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
 
             connection.Open();
 
@@ -136,7 +136,7 @@ namespace QLNhanSu
         {
             //kiểm tra điều kiện combobox đang tìm theo gì, trong combobox hiện đang có tìm theo mã hàng, tên hàng và số lượng
 
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             //kiểm tra điều kiện combobox đang tìm theo gì, trong combobox hiện đang có tìm theo mã hàng, tên hàng và số lượng
             if (cbxTimTheo.Text == "Mã hàng")
