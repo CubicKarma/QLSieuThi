@@ -58,6 +58,19 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Helper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\Helper.Designer.cs">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\HelpPictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helpers\HelpPictureBox.Designer.cs">
+      <DependentUpon>HelpPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Utilities.cs" />
     <Compile Include="MenuQLHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,19 +95,6 @@
     <Compile Include="QLKhachHang.Designer.cs">
       <DependentUpon>QLKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\Helper.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Helper\Helper.Designer.cs">
-      <DependentUpon>Helper.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper\HelpPictureBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Helper\HelpPictureBox.Designer.cs">
-      <DependentUpon>HelpPictureBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helper\Utilities.cs" />
     <Compile Include="ManHinhChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +115,12 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\Helper.resx">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\HelpPictureBox.resx">
+      <DependentUpon>HelpPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuQLHang.resx">
       <DependentUpon>MenuQLHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,12 +132,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLKhachHang.resx">
       <DependentUpon>QLKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Helper\Helper.resx">
-      <DependentUpon>Helper.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Helper\HelpPictureBox.resx">
-      <DependentUpon>HelpPictureBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManHinhChinh.resx">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>

@@ -51,7 +51,7 @@ namespace QLNhanSu
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
 
             string id = txtMaKH.Text;
             connection.Open();
@@ -119,7 +119,7 @@ namespace QLNhanSu
 
         private void QLPhongBan_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(Helper.Define.dataSource);
+            connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             loadData();
         }
@@ -134,7 +134,7 @@ namespace QLNhanSu
         private void btnTim_Click(object sender, EventArgs e)
         {
 
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             if (txtSearch.Text.Trim() == "" )
             {

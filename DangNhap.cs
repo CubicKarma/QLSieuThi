@@ -26,7 +26,7 @@ namespace QLNhanSu
 
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
 
             try
             {

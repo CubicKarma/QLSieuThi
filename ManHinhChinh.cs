@@ -15,6 +15,8 @@ namespace QLNhanSu
         public ManHinhChinh()
         {
             InitializeComponent();
+            KeyPreview = true;
+            KeyDown += new KeyEventHandler(Form_KeyDown);
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
@@ -24,13 +26,22 @@ namespace QLNhanSu
             quanLyNhanVien.ShowDialog();
         }
 
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                var helperDialog = new Helpers.Helper();
+                helperDialog.ShowDialog();
+            }
+        }
+
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();            
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Helper.Utilities.GetMainForm().Show();
+            Helpers.Utilities.GetMainForm().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +56,12 @@ namespace QLNhanSu
             this.Hide();
             MenuQLHang menuHang = new MenuQLHang();
             menuHang.ShowDialog();
+        }
+
+        private void helpBTN_Click(object sender, EventArgs e)
+        {
+            var helperDialog = new Helpers.Helper();
+            helperDialog.ShowDialog();
         }
     }
 }

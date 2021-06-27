@@ -22,7 +22,7 @@ namespace QLNhanSu
         }
         private void DangKy_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(Helper.Define.dataSource);
+            connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
         }
 
@@ -38,7 +38,7 @@ namespace QLNhanSu
                 command.ExecuteNonQuery();
 
                 this.Close();
-                Helper.Utilities.GetMainForm().Show();
+                Helpers.Utilities.GetMainForm().Show();
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace QLNhanSu
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            Helper.Utilities.GetMainForm().Show();
+            Helpers.Utilities.GetMainForm().Show();
         }
 
     }

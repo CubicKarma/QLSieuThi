@@ -59,7 +59,7 @@ namespace QLNhanSu
 
         private void NhapHang_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(Helper.Define.dataSource);
+            connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             loadData();
         }

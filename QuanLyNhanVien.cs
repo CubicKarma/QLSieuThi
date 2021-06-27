@@ -48,7 +48,7 @@ namespace QLNhanSu
 
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(Helper.Define.dataSource);
+            connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             loadData();
         }
@@ -102,12 +102,12 @@ namespace QLNhanSu
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             //Chuyển về form đăng nhập rồi mới tắt form để app đc terminate
-            Helper.Utilities.GetMainForm().Show();
+            Helpers.Utilities.GetMainForm().Show();
         }
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
 
             connection.Open();
 
@@ -157,7 +157,7 @@ namespace QLNhanSu
         private void btnTim_Click(object sender, EventArgs e)
         {
             // tìm kiếm theo tên nhân viên
-            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+            SqlConnection connection = new SqlConnection(Helpers.Define.dataSource);
             connection.Open();
             string tenNV = txtSearch.Text;
             string sql = "select ten_Nv from NHANVIEN where ten_Nv = '" + txtSearch.Text + "'";
@@ -194,7 +194,7 @@ namespace QLNhanSu
         {
             if (helpf == null)
             {
-                Helper.Helper helper = new Helper.Helper();
+                Helpers.Helper helper = new Helpers.Helper();
                 helper.ShowDialog();
                 helpf = helper;
             }
