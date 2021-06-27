@@ -73,12 +73,42 @@ namespace QLNhanSu
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            
+            command = connection.CreateCommand();
+            command.CommandText = "select * from HANGNHAP";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection connection = new SqlConnection(Helper.Define.dataSource);
+
+            connection.Open();
+
+            string sql = "select * from HANG where id_Hang = '" + txtMaHang.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+
+            SqlDataReader dta = cmd.ExecuteReader();
+            if (dta.Read() == true)
+            {
+
+                MessageBox.Show(" Trùng Mã hàng! Mời Nhập lại");
+            }
+            else
+            {
+                dta.Close();
+                command = connection.CreateCommand();
+                command.CommandText = "Insert into HANG values('" + txtMaHang.Text + "', N'" + txtTenHang.Text + "','" + txtSoLuong.Text + "','" + txtDonGiaNhap.Text + "','" + txtDonGiaBan.Text + "')";
+                command.ExecuteNonQuery();
+
+                command = connection.CreateCommand();
+                command.CommandText = "Insert into HANG values('" + txtMaHang.Text + "', N'" + txtTenHang.Text + "','" + txtSoLuong.Text + "','" + txtDonGiaNhap.Text + "')";
+                command.ExecuteNonQuery();
+                loadData();
+            }
         }
 
         private void btnreset_Click(object sender, EventArgs e)
