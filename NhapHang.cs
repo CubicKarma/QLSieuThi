@@ -24,6 +24,7 @@ namespace QLNhanSu
         //Datasourse (khac nhau)
 
         DataTable table = new DataTable();
+        DataTable table2 = new DataTable();
 
         //demo datagridview trong form QuanLyNhanvien.cs
         void loadData()
@@ -76,9 +77,9 @@ namespace QLNhanSu
             command = connection.CreateCommand();
             command.CommandText = "select * from HANGNHAP";
             adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
+            table2.Clear();
+            adapter.Fill(table2);
+            dataGridView1.DataSource = table2;
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace QLNhanSu
                 command.ExecuteNonQuery();
 
                 command = connection.CreateCommand();
-                command.CommandText = "Insert into HANG values('" + txtMaHang.Text + "', N'" + txtTenHang.Text + "','" + txtSoLuong.Text + "','" + txtDonGiaNhap.Text + "')";
+                command.CommandText = "Insert into HANGNHAP values('" + txtMaHang.Text + "', N'" + txtTenHang.Text + "','" + txtSoLuong.Text + "','" + txtDonGiaNhap.Text + "')";
                 command.ExecuteNonQuery();
                 loadData();
             }

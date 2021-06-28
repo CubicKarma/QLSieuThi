@@ -118,10 +118,25 @@ namespace QLNhanSu
                 if (txtMaHD.Text != null)
                 {
                     dta.Close();
-                    command = connection.CreateCommand();
-                    command.CommandText = "Insert into HOADON values('" + txtMaHD.Text + "', N'" + cmbMaHang.Text + "', N'" + txtSoLuong.Text + "', N'" + cmbMaNv.Text + "', N'" + cmbMaKH.Text + "', N'" + dtpNgayBan.Text + "', N'" + txtTongTien.Text + "')";
-                    command.ExecuteNonQuery();
-                    loadData();
+                    //kiểm tra số lượng hàng mua so với số lượng hàng trong kho
+                    int soLuongMua = Int32.Parse(txtSoLuong.Text);
+                    int soLuongTrongKho = Int32.Parse(txtSoLuongHangTrongKho.Text);
+                    if (soLuongMua > soLuongTrongKho)
+                        MessageBox.Show("Hàng trong kho không đủ");
+                    else
+                    {
+                        //update số lượng hàng trong kho
+                        int soLuongHangConLai = soLuongTrongKho - soLuongMua;
+                        command = connection.CreateCommand();
+                        command.CommandText = "update HANG set soLuong = " + soLuongHangConLai + " where id_Hang = '" + cmbMaHang.Text + "'";
+                        command.ExecuteNonQuery();
+
+                        //thêm hóa đơn
+                        command = connection.CreateCommand();
+                        command.CommandText = "Insert into HOADON values('" + txtMaHD.Text + "', N'" + cmbMaHang.Text + "', N'" + txtSoLuong.Text + "', N'" + cmbMaNv.Text + "', N'" + cmbMaKH.Text + "', N'" + dtpNgayBan.Text + "', N'" + txtTongTien.Text + "')";
+                        command.ExecuteNonQuery();
+                        loadData();
+                    }    
                 }
                 
             }
@@ -237,6 +252,7 @@ namespace QLNhanSu
 
             txtTenHang.Text = dataGridView4.Rows[0].Cells[1].Value.ToString();
             txtDonGia.Text = dataGridView4.Rows[0].Cells[4].Value.ToString();
+            txtSoLuongHangTrongKho.Text = dataGridView4.Rows[0].Cells[2].Value.ToString();
         }
     }
 }

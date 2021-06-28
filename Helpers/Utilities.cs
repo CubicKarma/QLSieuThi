@@ -53,7 +53,7 @@ namespace Helpers
     class Define
     {
         //HAILONG
-        public const string dataSource = @"Data Source=DESKTOP-3PP3KKO;Initial Catalog=QLSieuThi;Integrated Security=True";
+        public const string dataSource = @"Data Source=LAPTOP-A119A7GR\HONGUYENHAILONG;Initial Catalog=QLSieuThi;Integrated Security=True";
 
         public static int Clamp(ref int value, int min, int max)
         {
