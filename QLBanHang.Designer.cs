@@ -106,7 +106,7 @@
             // 
             this.txtTenNv.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenNv.Location = new System.Drawing.Point(209, 196);
-            this.txtTenNv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNv.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNv.Name = "txtTenNv";
             this.txtTenNv.ReadOnly = true;
             this.txtTenNv.Size = new System.Drawing.Size(197, 29);
@@ -116,7 +116,7 @@
             // 
             this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaHD.Location = new System.Drawing.Point(209, 80);
-            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(197, 29);
             this.txtMaHD.TabIndex = 60;
@@ -124,8 +124,8 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 577);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 540);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(848, 263);
@@ -160,7 +160,7 @@
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
             this.btnReturn.Location = new System.Drawing.Point(13, 17);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(49, 44);
             this.btnReturn.TabIndex = 73;
@@ -172,8 +172,8 @@
             this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
             this.btnreset.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnreset.Location = new System.Drawing.Point(531, 494);
-            this.btnreset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnreset.Location = new System.Drawing.Point(531, 480);
+            this.btnreset.Margin = new System.Windows.Forms.Padding(4);
             this.btnreset.Name = "btnreset";
             this.btnreset.Size = new System.Drawing.Size(109, 38);
             this.btnreset.TabIndex = 69;
@@ -188,7 +188,7 @@
             this.btnTinhTongTien.Image = ((System.Drawing.Image)(resources.GetObject("btnTinhTongTien.Image")));
             this.btnTinhTongTien.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTinhTongTien.Location = new System.Drawing.Point(531, 407);
-            this.btnTinhTongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTinhTongTien.Margin = new System.Windows.Forms.Padding(4);
             this.btnTinhTongTien.Name = "btnTinhTongTien";
             this.btnTinhTongTien.Size = new System.Drawing.Size(165, 38);
             this.btnTinhTongTien.TabIndex = 67;
@@ -202,8 +202,8 @@
             this.btnTaoHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTaoHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoHoaDon.Image")));
             this.btnTaoHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(209, 494);
-            this.btnTaoHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(209, 480);
+            this.btnTaoHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnTaoHoaDon.Name = "btnTaoHoaDon";
             this.btnTaoHoaDon.Size = new System.Drawing.Size(160, 38);
             this.btnTaoHoaDon.TabIndex = 66;
@@ -217,7 +217,7 @@
             this.dtpNgayBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayBan.Location = new System.Drawing.Point(209, 118);
-            this.dtpNgayBan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgayBan.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgayBan.Name = "dtpNgayBan";
             this.dtpNgayBan.Size = new System.Drawing.Size(197, 29);
             this.dtpNgayBan.TabIndex = 75;
@@ -237,7 +237,7 @@
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenKH.Location = new System.Drawing.Point(631, 119);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.ReadOnly = true;
             this.txtTenKH.Size = new System.Drawing.Size(263, 29);
@@ -258,7 +258,7 @@
             // 
             this.txtSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSdt.Location = new System.Drawing.Point(631, 164);
-            this.txtSdt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.ReadOnly = true;
             this.txtSdt.Size = new System.Drawing.Size(263, 29);
@@ -312,7 +312,7 @@
             // 
             this.txtTenHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTenHang.Location = new System.Drawing.Point(209, 370);
-            this.txtTenHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHang.Name = "txtTenHang";
             this.txtTenHang.ReadOnly = true;
             this.txtTenHang.Size = new System.Drawing.Size(197, 29);
@@ -333,7 +333,7 @@
             // 
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDonGia.Location = new System.Drawing.Point(209, 420);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
             this.txtDonGia.Size = new System.Drawing.Size(197, 29);
@@ -354,7 +354,7 @@
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSoLuong.Location = new System.Drawing.Point(631, 326);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(263, 29);
             this.txtSoLuong.TabIndex = 89;
@@ -364,7 +364,7 @@
             // 
             this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTongTien.Location = new System.Drawing.Point(704, 411);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(189, 29);
             this.txtTongTien.TabIndex = 91;
@@ -373,7 +373,7 @@
             // 
             this.cmbMaNv.FormattingEnabled = true;
             this.cmbMaNv.Location = new System.Drawing.Point(209, 162);
-            this.cmbMaNv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaNv.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaNv.Name = "cmbMaNv";
             this.cmbMaNv.Size = new System.Drawing.Size(197, 24);
             this.cmbMaNv.TabIndex = 92;
@@ -384,7 +384,7 @@
             // 
             this.cmbMaKH.FormattingEnabled = true;
             this.cmbMaKH.Location = new System.Drawing.Point(632, 84);
-            this.cmbMaKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaKH.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaKH.Name = "cmbMaKH";
             this.cmbMaKH.Size = new System.Drawing.Size(261, 24);
             this.cmbMaKH.TabIndex = 93;
@@ -394,7 +394,7 @@
             // 
             this.cmbMaHang.FormattingEnabled = true;
             this.cmbMaHang.Location = new System.Drawing.Point(209, 327);
-            this.cmbMaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaHang.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaHang.Name = "cmbMaHang";
             this.cmbMaHang.Size = new System.Drawing.Size(197, 24);
             this.cmbMaHang.TabIndex = 94;
@@ -404,7 +404,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(47, 880);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(189, 208);
@@ -414,7 +414,7 @@
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(363, 880);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.Size = new System.Drawing.Size(189, 208);
@@ -424,7 +424,7 @@
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(704, 880);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.Size = new System.Drawing.Size(189, 208);
@@ -433,7 +433,7 @@
             // txtSoLuongHangTrongKho
             // 
             this.txtSoLuongHangTrongKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtSoLuongHangTrongKho.Location = new System.Drawing.Point(696, 843);
+            this.txtSoLuongHangTrongKho.Location = new System.Drawing.Point(696, 848);
             this.txtSoLuongHangTrongKho.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuongHangTrongKho.Name = "txtSoLuongHangTrongKho";
             this.txtSoLuongHangTrongKho.ReadOnly = true;
@@ -444,7 +444,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 969);
+            this.ClientSize = new System.Drawing.Size(941, 811);
             this.Controls.Add(this.txtSoLuongHangTrongKho);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView3);
